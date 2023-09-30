@@ -30,36 +30,15 @@ def get_args():
 
     # image
     # model
-    parser.add_argument('--down_rate', type=int, default=8)
     parser.add_argument('--num_slc', type=int, default=3)
     parser.add_argument('--num_spectral', type=int, default=31)
-    # parser.add_argument('--slc', type=list,default=[0, 7, 27])   # [0 6 22] to [0 7 27]
     parser.add_argument('--slc', type=list, default=[0,6,22])  # -3.5ppm  3.5ppm
     parser.add_argument('--ker', type=tuple, default=(3, 1, 1))
-    parser.add_argument('--LR_HSI_shape', type=tuple, default=[1, 31, 64, 64])
-    parser.add_argument('--G_D', type=bool, default=True)
-
-    parser.add_argument('--times', type=int, default=6)
-    parser.add_argument('--patch_size', type=int, default=112)
-    parser.add_argument('--rate_z', type=float, default=0.3)
-    parser.add_argument('--rate_e', type=float, default=0.5)
-
-    parser.add_argument('--clas', type=int, default=4)
-    parser.add_argument('--shape', type=str, default='0 27 112 112')  # 0,(rank-num_slc), H, W
-    parser.add_argument('--spectral_map', type=bool, default=False)
-
-    parser.add_argument('--water_dr', type=int, default=2)
-    parser.add_argument('--s_water', type=int, default=101)  # water_dr2 101    water_dr3 67
-    parser.add_argument('--fitting', type=bool, default=True)
-    parser.add_argument('--water_fitting_num', type=int, default=13)
 
     # rio & rate
     parser.add_argument('--batch_size', type=int, default=2)
-    parser.add_argument('--test_batch_size', type=int, default=2)
-    parser.add_argument('--epoch', type=int, default=1000)
-    parser.add_argument('--rate_sparse', type=float, default=0.001)  # 原model中为LR 和 HR 不同
-    parser.add_argument('--rate_decay', type=float, default=0.997777)
-    parser.add_argument('--initlr', type=float, default=0.0001)
+
+    
 
     args = parser.parse_args()
     return args
