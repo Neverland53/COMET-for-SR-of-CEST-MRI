@@ -36,7 +36,7 @@ def get_args():
     parser.add_argument('--ker', type=tuple, default=(3, 1, 1))
 
     # rio & rate
-    parser.add_argument('--batch_size', type=int, default=2)
+    parser.add_argument('--test_batch_size', type=int, default=2)
 
     
 
