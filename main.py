@@ -19,11 +19,11 @@ def get_args():
 
 
 
-    parser.add_argument('--test_model',type=str, default='./data_cave/M2_dr4_6_22_384.ckpt')          # TODO
+    parser.add_argument('--test_model',type=str, default='./data/M2_dr4_6_22_384.ckpt')          # TODO
 
-    parser.add_argument('--test', type=str, default='./data_cave/test_par.mat')
-    parser.add_argument('--test_HR', type=str, default='./data_cave/test_HR_wS.npy')
-    parser.add_argument('--test_LR', type=str, default='./data_cave/test_dr4_wS.npy')
+    parser.add_argument('--test', type=str, default='./data/test_par.mat')
+    parser.add_argument('--test_HR', type=str, default='./data/test_HR_wS.npy')
+    parser.add_argument('--test_LR', type=str, default='./data/test_dr4_wS.npy')
 
     parser.add_argument('--save_dir', type=str, default='./model_test_result/')            # TODO
 
